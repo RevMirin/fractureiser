@@ -1,417 +1,307 @@
-# Modded Players Guide
+# Руководство для игроков с модами
 
-If you **only** play vanilla through a trusted launcher such as the official launcher or
-Prism, and have never touched mods ever: you are 100% safe. Stay away from mods for the
-time being.
+Если вы **только** играете в ваниль через доверенный лаунчер, такую как официальная программа запуска или
+Prism, и никогда не прикасались к модам: вы на 100% в безопасности. Держитесь подальше от модов для
+время.
 
-If you're a Modded Minecraft player, you need to verify if you have been infected by the
-fractureiser malware to ensure your machine and personal data are not at risk. You can do
-so with the instructions below.
+Если вы играете в майнкрафт с модами, вам необходимо проверить, не заразились ли вы
+Вредоносным ПО Fractureiser, чтобы гарантировать, что ваша машина и личные данные не находятся под угрозой. Ты можешь сделать
+это с помощью инструкций ниже.
 
-### Is it still going on??
-**No. Well, kinda.**  
-As of now, with our current knowledge, we believe the `fractureiser` virus has been fully cleaned 
-from current public mod(pack)s.  
+### Это все еще продолжается??
+**Нет. Ну вроде.**
+На данный момент, с нашими текущими знаниями, мы считаем, что вирус «fractureiser» полностью очищен.
+из текущих общедоступных модов (пакетов).
 
-Our current recommendation is that players who have ran the stage2 checker in this page are safe
-to continue playing, however, since mod uploads have been turned back online at both CurseForge 
-and Modrinth, there is now the potential for copycat malware authors to make new viruses. 
+Наша текущая рекомендация заключается в том, что игроки, которые запустили средство проверки ступени 2 на этой странице, могут безопасно продолжать играть, однако, поскольку загрузки модов были возвращены в онлайн как на CurseForge, так и на Modrinth, теперь у авторов вредоносных программ-подражателей есть возможность создавать новые вирусы.
 
-We are in contact with all relevant parties to establish protocols so that this doesn't happen 
-in the future.
+Мы находимся в контакте со всеми соответствующими сторонами для установления протоколов, чтобы этого не произошло.
+в будущем.
 
-If you want to play, please go through the diagnostic steps in this page as well as the follow
-up sections on what to do if you are or aren't infected.
+Если вы хотите играть, выполните диагностические шаги на этой странице, а также выполните следующие действия.
+разделы о том, что делать, если вы инфицированы или не инфицированы.
 
-### Page Structure
-* [What Actually Happened?](#what-actually-happened)
-* [Am I Infected?](#am-i-infected)
-* [I'm Infected, Now What?](#im-infected-now-what)
-* [I'm Not Infected, Now What?](#im-not-infected-now-what)
-* [Frequently Asked Questions](#frequently-asked-questions)
-* [Technical FAQ](#technical-faq)
+### Структура страницы
+* [Что на самом деле произошло?] (#Что-на-самом-деле-произошло?)
+* [Я заражен?] (#am-i-infected)
+* [Я заражен, что теперь?](#im-infected-now-what)
+* [Я не заражен, что теперь?](#im-not-infected-now-what)
+* [Часто задаваемые вопросы](#frequently-asked-questions)
+* [Часто задаваемые вопросы по техническим вопросам](#technical-faq)
 
-If you have any questions about fractureiser, please read this page in full, including the FAQ at
-the end, as most of the questions we've been getting are answered here.
+Если у вас есть какие-либо вопросы о дробильщике, пожалуйста, прочитайте эту страницу полностью, включая часто задаваемые вопросы по адресу
+конец, так как здесь есть ответы на большинство вопросов, которые мы получаем.
 
-## What Actually Happened?
+## Что на самом деле произошло?
 
-Several innocent looking malicious mods and plugins were initially uploaded by the malware's creator 
-to the mod hosting website CurseForge and plugin hub dev.craftbukkit.org (not the Bukkit 
-software itself). A high-profile mod pack developer downloaded one of these mods to try
-out, which infected files in their computer without their knowledge - this included a copy of a 
-working project that would then be uploaded to CurseForge as a seemingly leigimate file, with the 
-virus included. 
+Несколько невинно выглядящих вредоносных модов и плагинов изначально были загружены создателем вредоносного ПО.
+на сайт хостинга модов CurseForge и хаб плагинов dev.craftbukkit.org (не Bukkit
+само программное обеспечение). Известный разработчик пакетов модов загрузил один из этих модов, чтобы попробовать
+out, которые заразили файлы на своем компьютере без их ведома, включая копию
+рабочий проект, который затем будет загружен в CurseForge как законный файл, с
+вирус в комплекте.
 
-This process then repeated itself for a few other cases from users on CurseForge and 
-dev.craftbukkit.org, infecting copies of several popular plugins and mods. *There are reports of 
-malicious plugin and mod jars as early
-as mid-April.*
+Затем этот процесс повторился для нескольких других случаев от пользователей на CurseForge и
+dev.craftbukkit.org, заражая копии нескольких популярных плагинов и модов. *Есть сообщения о
+вредоносные плагины и моды jars как раньше
+как середина апреля.*
 
-Alongside this, brute force access attempts on high traffic content creator accounts on CurseForge
-were attempted by the malware author. We are currently unsure whether the breach was due to the
-brute force attempt or due to trojan infection on the accounts' owners.
+Наряду с этим автором вредоносного ПО были предприняты попытки грубой силы доступа к учетным записям создателей контента с высоким трафиком на CurseForge. В настоящее время мы не уверены, произошло ли нарушение из-за попытки грубой силы или из-за троянского заражения владельцев учетных записей.
 
-This malware is composed of multiple "stages", each Stage is responsible for downloading and
-running the next one. In total, there are three known Stages (Stages 1, 2, and 3), with infected
-mod files serving as a "Stage 0" to kick the whole process off.
+Это вредоносное ПО состоит из нескольких «стадий», каждая из которых отвечает за загрузку и запуск следующей. Всего существует три известных этапа (этапы 1, 2 и 3), причем зараженные файлы модов служат «этапом 0», запускающим весь процесс.
 
-Stage 3 is the "mastermind" of the malware, and we have evidence that it attempts to do all of
-the following:
+Этап 3 является «вдохновителем» вредоносной программы, и у нас есть доказательства того, что она пытается сделать все из следующего:
 
-* Propagate itself to *all* `jar` files on the filesystem, possibly infecting mods that
-  were not downloaded from CurseForge or BukkitDev, or other Java programs
-* Steal cookies and login information for many web browsers
-* Replace cryptocurrency addresses in the clipboard with alternates that are presumably owned by
-the attacker
-* Steal Discord credentials
-* Steal Microsoft and Minecraft credentials
+* Распространяется на *все* `jar` файлы в файловой системе, возможно, заражая моды, которые не были загружены из CurseForge или BukkitDev, или других программ Java
+* Украсть файлы cookie и данные для входа во многие веб-браузеры
+* Замените криптовалютные адреса в буфере обмена на альтернативные, которые предположительно принадлежат злоумышленнику.
+* Украсть учетные данные Discord
+* Украсть учетные данные Microsoft и Minecraft
 
-(See [technical details](tech.md) for more info)
+(См. [технические детали](tech.md) для получения дополнительной информации)
 
-Because of its behavior, we are **very confident** this is a **targeted attack against the modded 
-Minecraft ecosystem**. It's quite bad.
+Из-за его поведения мы **полностью уверены**, что это **целевая атака на модифицированную экосистему Minecraft**. Это очень плохо.
 
-**Until further notice, exercise extreme caution with Minecraft mod downloads, regardless
-of origin.** While the control server for this malware is currently offline, **any
-download from Curseforge or the Bukkit plugin repository in the last 2-3 weeks should be
-treated as potentially malicious**. Some malware scanners have started adding signatures
-to their databases, but until this rolls out to all of them, please exercise caution.
+**До дальнейшего уведомления, будьте предельно осторожны с загрузками модов Minecraft, независимо от их происхождения.** Хотя управляющий сервер для этой вредоносной программы в настоящее время отключен, **любая загрузка из Curseforge или репозитория плагинов Bukkit за последние 2-3 недели должна рассматриваться как потенциально вредоносные**. Некоторые сканеры вредоносных программ начали добавлять сигнатуры в свои базы данных, но пока это не будет распространено на все из них, будьте осторожны.
 
-*At this point we cannot be confident claiming any hosting service is unaffected*. Please
-exercise caution regardless of what site you use. Even Maven repositories may be infected,
-and this malware goes back months.
+*На данный момент мы не можем быть уверены, что никакие услуги хостинга не затронуты*. Пожалуйста, соблюдайте осторожность независимо от того, какой сайт вы используете. Даже репозитории Maven могут быть заражены, а эта вредоносная программа существует уже несколько месяцев.
 
-Currently, new infections are impossible as the attacker's server has been shut down,
-existing infections may still be active.
+В настоящее время новые заражения невозможны, так как сервер злоумышленника отключен, существующие инфекции могут быть активны.
 
-<!--### Get to the point, how do I fix this?
+<!--### Перейдем к делу, как мне это исправить?
 
-![Flowchart](media/flowchart.png)-->
+![Блок-схема](media/flowchart.png) -->
 
-### Wait, what the f*** is a "stage"?
+### Подождите, что за хрень такая "сцена"?
 
-![Stage Diagram](media/stages.png)
+![Сценическая диаграмма](media/stages.png)
 
-## Am I Infected?
+## Я заражен?
 
-The malware has multiple stages, so asking whether you are infected is actually two questions
+Вредоносное ПО имеет несколько стадий, поэтому вопрос о том, заражены ли вы, на самом деле состоит из двух вопросов.
 
-### Do any of my mod files have Stage 0?
-A variety of scanners exist that take a mod file and detect whether it is infected by Stage 0 of
-the malware.
+### Имеют ли какие-либо файлы моих модов стадию 0?
+Существует множество сканеров, которые берут файл мода и определяют, заражен ли он этапом 0 вредоносного ПО.
 
-* Overwolf's [scanner](https://github.com/overwolf/jar-infection-scanner/releases)
-  * This is the recommended option for checking your entire game - just point it at the CurseForge 
-installation folder or wherever else  you have your instances saved
-  * This is a standalone program and does not require the Overwolf app installed
-* douira's [website-based online scanner](https://douira.github.io/fractureiser-web-detector/)
-* cortex's [nekodetector](https://github.com/MCRcortex/nekodetector/releases) 
-  * Click on "Assets" to show the runnable file - requires Java to be installed
+* [сканер] Overwolf (https://github.com/overwolf/jar-infection Scanner/releases) * Это рекомендуемый вариант для проверки всей игры — просто укажите его в папке установки CurseForge или в любом другом месте, где у вас есть экземпляры. сохранен
+   * Это отдельная программа, не требующая установки приложения Overwolf.
+* douira [онлайн-сканер на основе веб-сайта] (https://douira.github.io/fractureiser-web-detector/)
+* [nekodetector] cortex (https://github.com/MCRcortex/nekodetector/releases)
+   * Нажмите «Активы», чтобы отобразить исполняемый файл — требуется установленная Java.
 
-In isolation, stage 0 infection is not dangerous if the files are deleted and never ran.
+В отдельности заражение стадии 0 не опасно, если файлы удалены и никогда не запускались.
 
-### Are Stage 2 files present on my system?
+### Имеются ли в моей системе файлы Stage 2?
 
-Stage 2 files being on your system means that the stages 0 and 1 of the malware ran successfully.
-If they are present at all, you are likely *fully infected* and should continue reading the
-instructions in the document.
+Наличие файлов этапа 2 в вашей системе означает, что этапы 0 и 1 вредоносного ПО запустились успешно.
+Если они вообще присутствуют, вы, вероятно, *полностью заражены* и должны продолжить чтение инструкций в документе.
 
-Many virus scanners are starting to detect stage 2 files. If you get a warning that such
-files were found and removed, proceed to the "I'm Infected, Now What?" section.
+Многие антивирусные сканеры начинают обнаруживать файлы стадии 2. Если вы получили предупреждение о том, что такие файлы были найдены и удалены, перейдите к пункту «Я заражен, что дальше?» раздел.
 
-Otherwise, you can check manually by doing the following, based on your platform:
+В противном случае вы можете проверить вручную, выполнив следующие действия в зависимости от вашей платформы:
 
-#### Windows Instructions
+#### Инструкции для Windows
 
-* Open your Start menu with the Windows Key, and type `%localappdata%` - it should appear as such:
-![Search results for the above query](media/localappdata.png)
+* Откройте меню «Пуск» с помощью ключа Windows и введите «%localappdata%» — должно появиться следующее: ![Результаты поиска по указанному выше запросу](media/localappdata.png)
 
-* Inside the Local appdata folder, you must ensure that your Explorer is set to view both 
-`Hidden Items`, and `Protected Operating System Files`.
-  * This can be done from View > Options
-  * If you are unsure how to do this, a video explanation 
-[can be found here](https://youtu.be/KLTlTlnXeKs).
-  * Windows 11 users can find the same options under the "View" button at the top ribbon, as 
-  well as  the  "..." button on the rightmost side of it
+* В папке Local appdata вы должны убедиться, что ваш проводник настроен на просмотр обоих
+«Скрытые элементы» и «Защищенные файлы операционной системы».
+   * Это можно сделать в меню Вид > Параметры
+   * Если вы не знаете, как это сделать, видео-объяснение [можно найти здесь] (https://youtu.be/KLTlTlnXeKs).
+   * Пользователи Windows 11 могут найти те же параметры под кнопкой «Просмотр» на верхней ленте, а также с помощью кнопки «...» в самой правой части ленты.
 
-* Locate a folder named `Microsoft Edge`. The SPACE between "Microsoft" and "Edge" is
-  important - as `MicrosoftEdge` is a legitimate folder that is used by Edge.  The virus
-  simply named it like that to disguise itself.  
-  * The legitimate folder might also be called `Microsoft\Edge` (an `Edge` folder inside a 
-`Microsoft` folder).
-  * The legitimate folder doesn't *have* to exist - if you don't have any Edge related folders,
-  you're safe.
-  * Both legitimate folders can exist at the same time, this is okay too.
-* If `Microsoft Edge` is present, you were infected. If this is the case, permanently delete the 
-folder and everything inside it.
-  * If the folder can not be deleted, you must stop any Java programs currently running via your 
-Task Manager.
+* Найдите папку с именем «Microsoft Edge». ПРОБЕЛ между «Microsoft» и «Edge» важен, поскольку «MicrosoftEdge» — это законная папка, используемая Edge. Вирус просто назвал его так, чтобы замаскироваться.
+   * Допустимая папка также может называться Microsoft\Edge (папка Edge внутри папки Microsoft).
+   * Легальная папка не *должна* существовать — если у вас нет папок, связанных с Edge, вы в безопасности.
+   * Обе законные папки могут существовать одновременно, это тоже нормально.
+* Если `Microsoft Edge` присутствует, вы были заражены. Если это так, навсегда удалите папку и все, что в ней находится.
+   * Если папку нельзя удалить, вы должны остановить все программы Java, работающие в данный момент, через диспетчер задач.
 
-#### MacOS Information
+#### Информация о MacOS
 
-The malware does not seem to affect MacOS, so you should be fine.  
-*Check back here every now and then just in case.*
+Вредоносная программа, похоже, не влияет на MacOS, так что все должно быть в порядке.
+*На всякий случай заглядывайте сюда время от времени.*
 
-#### Linux Instructions
+#### Инструкции для Linux
 
-Firstly, ensure whichever method you are using to list files has the ability to view hidden files.
-Most GUI file managers have the shortcut Ctrl+H to toggle hidden files. If doing this on a terminal, 
-use `ls -A` in the respective directories, or `ls -lha` for a more detailed listing.
+Во-первых, убедитесь, что любой метод, который вы используете для вывода списка файлов, позволяет просматривать скрытые файлы.
+Большинство файловых менеджеров с графическим интерфейсом имеют сочетание клавиш Ctrl+H для переключения скрытых файлов. Если вы делаете это на терминале, используйте «ls -A» в соответствующих каталогах или «ls -lha» для получения более подробного списка.
 
-If any of the following files exist, you were infected. If this is the case, delete all of them:
+Если какой-либо из следующих файлов существует, вы были заражены. Если это так, удалите их все:
 * `~/.config/systemd/user/systemd-utility.service`
 * `/etc/systemd/system/systemd-utility.service`
 * `~/.config/.data/lib.jar`
 
-Upon doing so, if applicable, check your `journalctl` for any changes you may not recognize. You
-can do this with the commands `journalctl -exb` (for system logs) and `journalctl -exb --user` 
-(for user logs). Run the following commands to refresh your systemd services:
+После этого, если это применимо, проверьте свой `journalctl` на наличие изменений, которые вы можете не распознать. Вы можете сделать это с помощью команд `journalctl -exb` (для системных журналов) и `journalctl -exb --user` (для пользовательских журналов). Выполните следующие команды, чтобы обновить службы systemd:
 ```sh
-sudo systemctl daemon-reload # Enter your user password
-systemctl --user daemon-reload 
+sudo systemctl daemon-reload # Введите пароль пользователя
+systemctl --user демон-перезагрузка
 ```
 
-#### Scripts
+#### Скрипты
 
-*If you don't know how to run a PowerShell or Bash script, these are not for you.*  
-Automated PowerShell or Bash scripts are also available [on the PrismLauncher
-website](https://prismlauncher.org/news/cf-compromised-alert/#automated-script) to check
-for Stage 2 for you, if you have the technical knowhow to run them. Overwolf (Curseforge's
-parent company) has also released a C# Stage 2 detection tool:
-https://github.com/overwolf/detection-tool
+*Если вы не знаете, как запустить скрипт PowerShell или Bash, это не для вас.*
+Автоматизированные сценарии PowerShell или Bash также доступны [на веб-сайте PrismLauncher] (https://prismlauncher.org/news/cf-compromised-alert/#automated-script), чтобы проверить этап 2, если у вас есть технические ноу-хау. запустить их. Overwolf (материнская компания Curseforge) также выпустила инструмент обнаружения C# Stage 2: https://github.com/princessmortix/defractureiser.
 
-## I'm Infected, Now What?
+## Я заражен, что теперь?
 
-**IMPORTANT**: We do not currently know the full extent of everything this can do, nor what its
-intent is, so extreme caution should be exercised until a complete way to remove any symptoms is
-found. Everything stated here is only *what we know* - please keep an eye on communication from the
-team on updates if anything critical is found.
+**ВАЖНО**: В настоящее время мы не знаем ни всего, что это может сделать, ни его намерений, поэтому следует проявлять крайнюю осторожность, пока не будет найден полный способ устранения каких-либо симптомов. Все изложенное здесь — это только *то, что нам известно* — пожалуйста, следите за сообщениями команды об обновлениях, если будет обнаружено что-то критическое.
 
-If you find stage 2 files from fractureiser on your system, it's very likely that the stage 3 code
-has ran and infected your machine.  
-Your best option now is to assume everything on that system is *entirely compromised*. You should:
+Если вы обнаружите в своей системе файлы этапа 2 от fraciser, весьма вероятно, что код этапа 3 был запущен и заразил вашу машину.
+Теперь вам лучше всего предположить, что все в этой системе *полностью скомпрометировано*. Вам следует:
 
-* Back up anything you do not want to lose on an a flash drive or external disk (you should be
-doing this regularly anyway!)
-* Using a separate device, change the passwords to all services you were logged into on
-  the old machine (Discord, email, etc.). Preferably using a password manager like
-  [BitWarden](https://bitwarden.com).
-* If you were not yet using Two-Factor Authentication (Authenticator app or SMS) for every service
-that supports it, please start doing so immediately
-* If you are able to, contact a professional service in your area to run a proper
-  diagnostic on your machine for anything suspicious, or as a safe default simply wipe and
-  reinstall the system.
-* Read the below section on what to do if you're not infected, as the steps there apply to you too.
+* Сделайте резервную копию всего, что вы не хотите потерять, на флэш-накопитель или внешний диск (в любом случае вы должны делать это регулярно!)
+* Используя отдельное устройство, измените пароли ко всем сервисам, в которые вы вошли на старой машине (Discord, электронная почта и т. д.). Желательно использовать менеджер паролей, например [BitWarden](https://bitwarden.com).
+* Если вы еще не использовали двухфакторную аутентификацию (приложение для аутентификации или SMS) для каждой службы, которая ее поддерживает, немедленно начните это делать.
+* Если у вас есть возможность, обратитесь в профессиональную службу в вашем регионе, чтобы провести надлежащую диагностику вашего компьютера на предмет чего-либо подозрительного, или в качестве безопасного по умолчанию просто очистите и переустановите систему.
+* Прочтите приведенный ниже раздел о том, что делать, если вы не заражены, так как приведенные здесь шаги относятся и к вам.
 
-## I'm Not Infected, Now What?
+## Я не заражен, что теперь?
 
-If nothing was found by the stage 2 detector, chances are there's nothing going on and you're good
-to play.
+Если детектор этапа 2 ничего не нашел, скорее всего, ничего не происходит, и вы можете играть.
 
-While `fractureiser` has been cleaned out, new viruses may appear in the near future until we 
-establish new protocols. If you want to play the game, we recommend:
+Хотя «фрактурайзер» был очищен, в ближайшем будущем могут появиться новые вирусы, пока мы не установим новые протоколы. Если вы хотите играть в игру, мы рекомендуем:
 
-* Play exclusively mods and modpacks that you have already downloaded and verified safe.
-* Avoid downloading anything uploaded after the 8th of June from new or unknown authors, for the
-same reason as the previous point.
-* Avoid updating your mod(pack)s.
-* Keep an eye on communication from the team on developments regarding new methods to detect
-issues like this in the future.
+* Играйте исключительно в моды и пакеты модов, которые вы уже загрузили и проверили на безопасность.
+* Избегайте загрузки чего-либо, загруженного после 8 июня от новых или неизвестных авторов, по той же причине, что и в предыдущем пункте.
+* Избегайте обновления ваших модов (пакетов).
+* Следите за сообщениями команды о разработках новых методов обнаружения подобных проблем в будущем.
 
-## Frequently Asked Questions
+## Часто задаваемые вопросы
 
-### Is CurseForge hacked?
-CurseForge itself is not compromised, only individual users. This is not a CurseForge problem, they
-just happened to the be place this happened in. CurseForge have also [posted an article](https://support.curseforge.com/en/support/solutions/articles/9000228509-june-2023-infected-mods-detection-tool/) describing the situation from their end and
-are working on deploying countermeasures.
+### CurseForge взломан?
+Сам CurseForge не скомпрометирован, только отдельные пользователи. Это не проблема CurseForge, они просто оказались там, где это произошло. CurseForge также [опубликовали статью] (https://support.curseforge.com/en/support/solutions/articles/9000228509-june-2023 -infected-mods-detection-tool/) описывают ситуацию со своей стороны и работают над развертыванием контрмер.
 
-### Is Modrinth okay?
-Modrinth has ran a full scan of the last 10 months of uploads and no infected projects were found. 
-We still recommend exercising extreme caution when downloading anything mod related at the moment. 
-The fact no mods were infected there was entirely luck.
+### С Модринтом все в порядке?
+Modrinth провел полное сканирование загрузок за последние 10 месяцев и не обнаружил ни одного зараженного проекта.
+Мы по-прежнему рекомендуем проявлять крайнюю осторожность при загрузке любых модов, связанных в данный момент.
+Тот факт, что никакие моды не были заражены, был полной удачей.
 
-### Is Modrinth safer?
-This isn't a website-level issue, Modrinth is just as safe as CurseForge is.
+### Модринт безопаснее?
+Это не проблема уровня веб-сайта, Modrinth так же безопасен, как и CurseForge.
 
-### How did CurseForge let this slip through?
-The code the stage 0 infection ran wasn't necessarily suspicious to an automated system, and could
-very well have been something another mod would've used. In fact, early heuristics for determining
-stage 0 infection had significant amounts of false flags on popular mods such as Quark.
+### Как CurseForge пропустил это?
+Код, запущенный заражением стадии 0, не обязательно был подозрительным для автоматизированной системы и вполне мог быть чем-то, что использовал бы другой мод. Фактически, ранние эвристики для определения заражения на стадии 0 имели значительное количество ложных флагов в популярных модах, таких как Quark.
 
-Realistically, this type of prevention on a platform scale is non-feasible due to the infinite
-different ways you can lay out code to hide your intent.
+На самом деле, этот тип предотвращения в масштабе платформы неосуществим из-за бесконечного количества различных способов, которыми вы можете разместить код, чтобы скрыть свои намерения.
 
-### Which Antiviruses catch this?
-New ones are being added as we speak, it's best to do the manual verification above instead of
-relying on AV for now.
+### Какие антивирусы это ловят?
+Пока мы говорим, добавляются новые, лучше всего выполнить ручную проверку, описанную выше, вместо того, чтобы пока полагаться на AV.
 
-### Is Multiplayer safe?
-Yes, you can not be infected via a multiplayer server if you don't download mods for it elsewhere.
+### Безопасен ли многопользовательский режим?
+Да, вы не можете заразиться через многопользовательский сервер, если вы не скачаете моды для него в другом месте.
 
-### Is Bedrock safe?
-Yes, this affects only Java.
+### Бедрок безопасен?
+Да, это касается только Java.
 
-### Are alternative game clients such as Lunar or Badlion safe?
-See the below point.
+### Безопасны ли альтернативные игровые клиенты, такие как Lunar или Badlion?
+См. пункт ниже.
 
-### Is Optifine safe? / Is Sodium safe? / Is Iris safe? / Is Create safe? / Is Essential safe? / Is (insert mod) safe?
+### Безопасен ли Optifine? / Безопасен ли натрий? / Айрис в безопасности? / Безопасно ли создавать? / Является ли Essential безопасным? / Безопасен ли (вставьте мод)?
 
-**We can not currently fully confirm the safety of any given mod.**
+**В настоящее время мы не можем полностью подтвердить безопасность того или иного мода.**
 
-One of the functions of stage3 of the virus is infecting as many .jars as it can find on your 
-computer. It can infect **all `.jar`s**, including Minecraft itself (vanilla/modded), Minecraft 
-mods, Spigot plugins, and unrelated Java applications. So if your computer has the stage3 portion 
-of the virus, it doesn't matter whether a mod you download is "safe" - it will *become* infected. 
-Detect and remove the later stages of fractureiser *first*.
+Одной из функций вируса стадии 3 является заражение как можно большего количества файлов .jar на вашем компьютере. Он может заражать **все файлы .jar**, включая сам Minecraft (ванильный/модифицированный), моды Minecraft, плагины Spigot и несвязанные Java-приложения. Поэтому, если на вашем компьютере есть часть вируса стадии 3, не имеет значения, является ли мод, который вы загружаете, «безопасным» - он *заразится*.
+Обнаружение и удаление более поздних стадий гидроразрыва *сначала*.
 
-At the moment, all *known* infected mods have been removed from CurseForge. CurseForge [posted a 
-list of known infected mods](https://support.curseforge.com/en/support/solutions/articles/9000228509-june-2023-infected-mods-detection-tool/) (bottom
-of the page) and has removed them from the website. Modrinth has scanned back 10 months and has not found any infected mods. 
+На данный момент все *известные* зараженные моды удалены из CurseForge. CurseForge [опубликовал список известных зараженных модов](https://support.curseforge.com/en/support/solutions/articles/9000228509-june-2023-infected-mods-detection-tool/) (внизу страницы) и удалил их с сайта. Modrinth просканировал 10 месяцев назад и не нашел зараженных модов.
 
-This does *not guarantee no sneaky ones slipped through*. To check whether a given jar contains 
-stage0 of fractureiser, check the [Am I Infected?](#am-i-infected) section and overall exercise
-extreme caution downloading anything mod related for now.
+Это *не гарантирует, что ни один трус не проскользнет*. Чтобы проверить, содержит ли данная банка 0-й этап разлома, проверьте раздел [Я заражен?] (#am-i-infected) и в целом проявляйте крайнюю осторожность, загружая все, что связано с модами на данный момент.
 
-### How widespread was the infection?
+### Насколько широко распространилась инфекция?
 
-CurseForge is reporting infected files were downloaded roughly 6,000 times for the entire 
-infection period. Quote from CF's Discord announcement: 
-> Just to give perspective, this accounts to about 0.015% of CurseForge’s daily downloads 
-> for Minecraft.
+CurseForge сообщает, что зараженные файлы были загружены примерно 6000 раз за весь период заражения. Цитата из объявления CF в Discord:
+> Для сравнения: это составляет около 0,015% ежедневных загрузок CurseForge.
+> для майнкрафта.
 
-### Did someone want to spoil the 1.20 release event?
+### Кто-то хотел испортить событие выпуска 1.20?
 
-It appears to be a coincidence - this malware campaign was active for quite a while before being 
-widely uncovered the morning-of the 1.20 release.
+Это похоже на совпадение — эта вредоносная кампания была активной в течение достаточно долгого времени, прежде чем была широко раскрыта утром в выпуске 1.20.
 
-## Technical FAQ
+## Технический FAQ
 
-### Can fractureiser escape VMs (Virtual Machines)?
+### Может ли дробилка обойти ВМ (виртуальные машины)?
 
-**No.**
+**Нет.**
 
-stage3 *does* contain code for *attempting* a *manual* escape from the 
-["Windows Sandbox"](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview).
-It does not happen automatically. If the virus is ran from the Windows Sandbox, it will try to
-mess with the clipboard to trick you into pasting a shortcut to the malware.
+stage3 *содержит* код для *попытки* *ручного* выхода из ["песочницы Windows"](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/ windows-sandbox/windows-sandbox-обзор).
+Это не происходит автоматически. Если вирус запускается из песочницы Windows, он попытается возиться с буфером обмена, чтобы заставить вас вставить ярлык вредоносной программы.
 
-Note that this sort of "clipboard escape" is nothing new and it is very easy to defeat by simply
-not sharing the clipboard between the host and guest OS. Use a more heavyweight virtual-machine
-than the "Windows Sandbox", and disable features like VirtualBox's "Guest Addons" or Hyper-V's
-"integration services".
+Обратите внимание, что в этом виде «побега из буфера обмена» нет ничего нового, и его очень легко победить, просто не разделяя буфер обмена между хостом и гостевой ОС. Используйте более тяжелую виртуальную машину, чем «песочница Windows», и отключите такие функции, как «гостевые надстройки» VirtualBox или «службы интеграции» Hyper-V.
 
-(*Real* virtual-machine escape exploits are worth millions of dollars and would not be burned on
-some Minecraft kids, and we have reason to believe the author of this malware is not a very good
-programmer in the first place.)
+(*Настоящие* эксплойты для побега на виртуальных машинах стоят миллионы долларов и не будут сожжены на некоторых детях Minecraft, и у нас есть основания полагать, что автор этой вредоносной программы вообще не очень хороший программист.)
 
-### Does this spread over the network?
+### Распространяется ли это по сети?
 
-As far as we know, fractureiser does not contain network spread functionality, but it is not fully
-out of the question.  
-A security researcher we are working with got an alert, but it ended up being about completely 
-unrelated malware that happened to use a similar filename. This was just a false alarm.
+Насколько нам известно, fraciser не содержит функционала сетевого распространения, но это не исключено полностью.
+Исследователь безопасности, с которым мы работаем, получил предупреждение, но в итоге оно касалось совершенно не связанного с ним вредоносного ПО, которое использовало похожее имя файла. Это была просто ложная тревога.
 
-### What are CurseForge and Modrinth doing about it?
+### Что с этим делают CurseForge и Modrinth?
 
-CurseForge has developed an open-source [stage2/3 detection tool](https://github.com/overwolf/detection-tool) 
-and [stage0 detection tool](https://github.com/overwolf/jar-infection-scanner), have scanned *all* 
-uploaded mods/plugins for stage0 infections, and have deleted all *known* infection cases.
+CurseForge разработала [инструмент обнаружения stage2/3] с открытым исходным кодом (https://github.com/overwolf/detection-tool) и [инструмент обнаружения stage0] (https://github.com/overwolf/jar-infection- сканер), просканировал *все* загруженные моды/плагины на наличие инфекций stage0 и удалил все *известные* случаи заражения.
 
-Modrinth has also scanned uploaded mods/plugins for stage0 infections going back 10 months and did 
-not find any.
+Modrinth также просканировал загруженные моды/плагины на наличие заражений stage0 за последние 10 месяцев и ничего не нашел.
 
-Both platforms are considering introducing some sort of automated "virus scan" process to the mod 
-submission pipeline. It's hard, since Java malware like this is typically bespoke.
+Обе платформы рассматривают возможность введения своего рода автоматизированного процесса «сканирования на вирусы» в конвейер отправки модов. Это сложно, поскольку вредоносное ПО Java, подобное этому, обычно создается на заказ.
 
-### What IP addresses and URLs should I block in my firewall/routing table?
+### Какие IP-адреса и URL-адреса следует заблокировать в моем брандмауэре/таблице маршрутизации?
 
-fractureiser-related code has been observed to connect to these URLs and addresses over a wide 
-variety of port numbers.
+Было замечено, что код, связанный с фракционером, подключается к этим URL-адресам и адресам через самые разные номера портов.
 
-* The hardcoded address in stage0-infected mods, and the first observed command&control 
-server: `85.217.144.130`
-* The second observed command&control server: `107.189.3.101`
-* The fallback URL that stage1 tries to use, and the stage2 command&control hostname: 
-`files-8ie.pages.dev`
+* Жестко запрограммированный адрес в модах, зараженных stage0, и первый обнаруженный сервер управления и контроля: `85.217.144.130`
+* Второй наблюдаемый сервер управления и контроля: `107.189.3.101`
+* Резервный URL-адрес, который пытается использовать stage1, и имя хоста команды и управления stage2: `files-8ie.pages.dev`
 
-There's also evidence of it trying to connect to the hostname `v2202209151437200088` 
-over port 25575 - unknown reasons; probably from an older version of the malware.
+Также есть доказательства того, что он пытается подключиться к хосту `v2202209151437200088` через порт 25575 - неизвестные причины; вероятно, из-за более старой версии вредоносного ПО.
 
-Here are some additional addresses to firewall related to skyrage stuff (again, *very* unlikely 
-skyrage was downloaded to anyone's PC through this vector, but nothing good comes from these 
-addresses anyway):
+Вот несколько дополнительных адресов к брандмауэру, связанных со скайрейджем (опять же, *очень* маловероятно, что скайрейдж был загружен на чей-то компьютер через этот вектор, но все равно ничего хорошего с этих адресов не выйдет):
 
 * `95.214.27.172`
 * `connect.skyrage.de`
 * `t23e7v6uz8idz87ehugwq.skyrage.de`
 * `qw3e1ee12e9hzheu9h1912hew1sh12uw9.skyrage.de`
-* *Probably just block all of `skyrage.de` honestly*
+* *Возможно, просто честно заблокируйте весь `skyrage.de`*
 
-Should go without saying that you should not visit these.
+Само собой разумеется, что вы не должны посещать их.
 
-### Can we make it against CurseForge/Modrinth rules for your mod to download other files?
+### Можем ли мы сделать это против правил CurseForge/Modrinth, чтобы ваш мод загружал другие файлы?
 
-It's already against CurseForge rules to upload malware. There are also many legitimate use cases 
-for a mod to download files that this would also stifle.
+Загружать вредоносное ПО уже запрещено правилами CurseForge. Есть также много законных вариантов использования мода для загрузки файлов, которые это также задушило бы.
 
-### Would it be possible to include some sort of "antivirus" or "sandbox" in the modloader itself?
+### Можно ли включить какой-нибудь "антивирус" или "песочницу" в сам загрузчик модов?
 
-"Antivirus": Probably not, for the same reasons that regular antiviruses didn't detect it. 
-Antiviruses can only detect known malware, not unknown malware.
+«Антивирус»: Вероятно, нет, по тем же причинам, по которым его не обнаруживали обычные антивирусы. Антивирусы могут обнаруживать только известные вредоносные программы, а не неизвестные вредоносные программы.
 
-Sandboxing: Including some sort of "does this class contain 'safe' code?" check before loading a 
-class is a great way to spur on a cat-and-mouse game between malware developers and modloader 
-developers.
+Песочница: в том числе какой-то «содержит ли этот класс« безопасный »код?» проверка перед загрузкой класса — отличный способ подстегнуть игру в кошки-мышки между разработчиками вредоносных программ и разработчиками загрузчиков модов.
 
-It's really hard to ban Java code from using a specific class (say, `URLClassLoader`) because you 
-can also refer to it with `Class.forName` (which has a ton of legitimate use-cases), and if you 
-ban or deny-list classes from *that*, you can typically find something *else* on the classpath 
-willing to call `Class.forName` for you, and trying to get rid of these gadgets is an endless 
-game of whack-a-mole.
+Очень сложно запретить Java-коду использовать определенный класс (скажем, `URLClassLoader`), потому что вы также можете ссылаться на него с помощью `Class.forName` (который имеет массу законных вариантов использования), и если вы запретите или запретите -list классы из *этого*, вы обычно можете найти что-то *еще* в пути к классам, готовое вызвать `Class.forName` для вас, и попытка избавиться от этих гаджетов является бесконечной игрой в кротовину.
 
-Sandboxing Java is pretty much impossible - see articles like 
-["Twenty Years of Escaping the Java Sandbox"](https://www.exploit-db.com/papers/45517).
+Песочница Java практически невозможна — см. такие статьи, как ["Двадцать лет выхода из песочницы Java"](https://www.exploit-db.com/papers/45517).
 
-Java mods are simply bundles of arbitrary code: treat them like an `.exe`, they can do anything. 
+Java-моды — это просто пакеты произвольного кода: относитесь к ним как к `.exe`, они могут делать все что угодно.
 
-### Why aren't mods cryptographically signed to prevent malware from tampering with them?
+### Почему моды не подписаны криптографически, чтобы предотвратить их вмешательство вредоносным ПО?
 
-Part of the problem is that signatures alone do not prevent malware - a cryptographically-signed 
-virus is still a virus - and if self-signing was permitted, it doesn't prevent tampering either - 
-it's possible for a virus to simply strip digital signatures off a jar ("delete META-INF") and 
-re-sign it with its own key. (This isn't a hypothetical, either: fractureiser does contain code to 
-remove digital signatures from the jars it infects.)
+Часть проблемы заключается в том, что сами по себе подписи не защищают от вредоносного ПО — вирус с криптографической подписью остается вирусом — и если самоподпись разрешена, это также не предотвращает подделку — вирус может просто удалить цифровые подписи. jar («удалить META-INF») и переподписать его собственным ключом. (Это также не гипотетически: fraciser действительно содержит код для удаления цифровых подписей из банок, которые он заражает.)
 
-Signed mods with online signature verification *does* seem like a somewhat promising way forward, 
-though it's not without tradeoffs. There will be [a meeting](2023-06-08-meeting.md) with
-many different reps from the modding ecosystem to discuss how to move forward.
+Подписанные моды с онлайн-проверкой подписи *действительно* кажутся несколько многообещающим путем, хотя и не без компромиссов. Будет [встреча](2023-06-08-meeting.md) с множеством представителей экосистемы моддинга, чтобы обсудить, как двигаться дальше.
 
-### Would it be possible to forbid mods from downloading executable code?
+### Можно ли запретить модам скачивать исполняемый код?
 
-It's not possible. You can't know whether a file contains executable code before you download it, 
-and after a file is downloaded, you can't control what is done with it.
+Это невозможно. Вы не можете знать, содержит ли файл исполняемый код, до его загрузки, а после загрузки файла вы не можете контролировать, что с ним делается.
 
-* What if my mod downloads a single Java class file?
-* What about a Java class file but spelled backwards, so it doesn't look like a class file at first?
-* What about a Java class file but encrypted?
-* What about Java *source* code that is compiled on your computer?
-* What about a Python script?
-* What about a file containing English prose where it just so *happens* that sentences with an 
-even number of words correspond to a 0, and sentences with an odd number of words correspond to 
-a 1? - even though it's a prose document I can technically reassemble it into 
-an `.exe`, if I so choose.
+* Что делать, если мой мод загружает один файл класса Java?
+* Как насчет файла класса Java, написанного задом наперед, чтобы сначала он не выглядел как файл класса?
+* Как насчет файла класса Java, но зашифрованного?
+* А как насчет *исходного* кода Java, скомпилированного на вашем компьютере?
+* Как насчет скрипта Python?
+* А как насчет файла, содержащего английскую прозу, где так уж получилось, что предложения с четным количеством слов соответствуют 0, а предложения с нечетным количеством слов соответствуют 1? - даже несмотря на то, что это прозаический документ, технически я могу собрать его в `.exe`, если захочу.
 
-### Is this related to that Spigot plugin malware going around?
+### Связано ли это с вредоносным ПО плагина Spigot?
 
-Possibly! There's some ties to the existing malware `skyrage` - the malware author uploaded a 
-skyrage-relevant `.jar` to their backup command&control server, in a fruitless attempt to 
-extend the attack, shortly before CloudFlare took it down anyway.
+Возможно! Есть некоторые связи с существующим вредоносным ПО «skyrage» — автор вредоносного ПО загрузил файл «.jar», относящийся к Skyrage, на свой резервный сервер управления и контроля в безуспешной попытке расширить атаку, незадолго до того, как CloudFlare все равно его уничтожил.
 
-**We have not received any reports of anyone becoming infected by Skyrage through this vector.** 
-The author updated their CloudFlare URL to point to Skyrage a significant length of time *after* 
-the hardcoded IP address in stage0-infected mods was already taken down. It's mostly a funny 
-curiosity that the attacker tried to serve this jar at all.
+**Мы не получали никаких сообщений о том, что кто-то заразился Skyrage через этот вектор.**
+Автор обновил URL-адрес CloudFlare, чтобы он указывал на Skyrage через значительный промежуток времени *после* того, как жестко запрограммированный IP-адрес в модах, зараженных stage0, уже был удален. Забавно, что нападавший вообще пытался подать эту банку.
 
-skyrage is an existing, well-studied piece of malware and you can find some more info about 
-it [here](https://ljskatt.no/analysis/updater_class/).
+Skyrage — это существующее, хорошо изученное вредоносное ПО, и вы можете найти дополнительную информацию о нем [здесь] (https://ljskatt.no/analysis/updater_class/).
