@@ -2,51 +2,48 @@
 	<img src="docs/media/logo.svg" alt="fractureiser logo" height="240">
 </p>
 
-*Pardon our dust, documentation still in progress*
+*Не вся информация верна, документация все еще в процессе*
 
-[简体中文版本见此](./lang/zh-CN/)
+## Что происходит?
+`fractureiser (фрактурайзер)` — это [вирус](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D1%80%D1%83%D1%81), обнаруженный в нескольких проектах Minecraft, загруженных на CurseForge и BukkitDev. Вредоносное ПО встроено в несколько модов, некоторые из которых были добавлены в очень популярные пакеты модов. Известно, что вредоносное ПО нацелено только на Windows и Linux.
 
-## What?
-`fractureiser` is a [virus](https://en.wikipedia.org/wiki/Computer_virus) found in several Minecraft projects uploaded to CurseForge and BukkitDev. The malware is embedded in multiple mods, some of which were added to highly popular modpacks. The malware is only known to target Windows and Linux.
+Если fractureiser (фрактурайзер) не остановить, он может быть **НЕВЕРОЯТНО ОПАСЕН** для вашей системы. Пожалуйста, прочтите этот документ, чтобы получить информацию, необходимую для обеспечения вашей безопасности.
 
-If left unchecked, fractureiser can be **INCREDIBLY DANGEROUS** to your machine. Please read through this document for the info you need to keep yourself safe.
+Это вредоносное ПО было названо fractureiser (фрактурайзер), потому что это имя учетной записи CurseForge, которая загрузила наиболее известные вредоносные файлы.
 
-We've dubbed this malware fractureiser because that's the name of the CurseForge account that uploaded the most notable malicious files.  
+## Что ТЕБЕ нужно знать
 
-## What YOU need to know
+### [Люди использующие моды НАЖМИ СЮДА](docs/users.md)
 
-### [Modded Players CLICK HERE](docs/users.md)
+Если вы просто игрок использующий моды, а не разработчик, приведенная выше ссылка — это все, что вам нужно. Она содержит поверхностную информацию о воздействии вредоносного ПО, шаги, чтобы проверить, есть ли оно у вас и как его удалить, а также часто задаваемые вопросы.
 
-If you're simply a mod player and not a developer, the above link is all you need. It contains surface level information of the malware's effects, steps to check if you have it and how to remove it, and an FAQ.
-
-Anyone who wishes to dig deeper may also look at
+Кому интересны изменения, можете посмотреть здесь
 * [Event Timeline](docs/timeline.md)
 * [Technical Breakdown](docs/tech.md)
 
-### I have never used any Minecraft mods
-You are not infected.
+### Я никогда не пользовался никакими модами Minecraft
+Вы не заражены.
 
-## Current Investigation Status
-We have a good idea how fractureiser works, from Stages 0 to 3. There are certain
-unknowns, but the attack servers are offline and to our knowledge, *new* infections are
-not possible. Old infections may still be active.
+## Текущий статус расследования
+У нас есть хорошее представление о том, как работает fraciser, от этапов 0 до 3. 
+Есть определенные неизвестные, но атакующие серверы отключены, и, насколько нам известно, новые заражения невозможны. 
+Старые инфекции могут все еще быть активными.
 
-User-facing documentation is more or less finished. We're working with community members to get it translated into other languages to further spread awareness.
+Документация для пользователя более или менее закончена. Мы работаем с членами сообщества, чтобы перевести его на другие языки для дальнейшего распространения информации.
 
-## Follow-Up Meeting
-On 2023-06-08 the fractureiser Mitigation Team held a meeting with notable members of the community to discuss preventive measures and solutions for future problems of this scale.
-See [this page](https://github.com/fractureiser-investigation/fractureiser/blob/main/docs/2023-06-08-meeting.md) for the agenda and minutes of the event.
+## Последующая встреча
+На 08.06.2023 группа по смягчению последствий фрактурайзера провела встречу с известными членами сообщества, чтобы обсудить превентивные меры и решения будущих проблем такого масштаба. На [этой](https://github.com/fractureiser-investigation/fractureiser/blob/main/docs/2023-06-08-meeting.md) странице можно найти повестку дня и протокол мероприятия.
 
-## Additional Info
+## Дополнительная информация
 
-If you have files relevant to this malware, please upload them to https://wormhole.app and email the URL to fractureiser@unascribed.com — anything sent to it will be shared with the rest of the team. If you need to get in touch more generally, please send mail to jaskarth4@gmail.com.
+Если у вас есть файлы, имеющие отношение к этой вредоносной программе, загрузите их на https://wormhole.app и отправьте URL-адрес по электронной почте на адрес Fractioniser@unascribed.com — все, что будет отправлено на него, будет передано остальной команде. Если вам нужно связаться в более общем плане, отправьте письмо по адресу jaskarth4@gmail.com.
 
-If you copy portions of this document elsewhere, *please* put a prominent link back to this [GitHub Repository](https://github.com/fractureiser-investigation/fractureiser) somewhere near the top so that people can read the latest updates and get in contact.
+Если вы копируете части этого документа в другое место, *пожалуйста* поместите заметную ссылку на этот [репозиторий GitHub] (https://github.com/fractureiser-investigation/fractureiser) где-нибудь вверху, чтобы люди могли читать последние обновления и выйти на связь.
 
-The **only** official public channel you may join without being personally invited that's *run by the same team that wrote this writeup* is [#cfmalware on EsperNet IRC](https://webchat.esper.net/?channels=cfmalware). **Joining an IRC channel will expose your IP address.**
+**Единственный** официальный общедоступный канал, к которому вы можете присоединиться без личного приглашения и который *управляется той же командой, которая написала эту статью*, — это [#cfmalware в EsperNet IRC](https://webchat.esper.net/?channels= вредоносное ПО). **Присоединение к IRC-каналу раскроет ваш IP-адрес.**
 
-**Do not ask for samples.** If you have experience and credentials, that's great, but we have no way to verify this without using up tons of our team's limited time. Sharing malware samples is dangerous, even among people who know what they're doing.
+**Не просите образцы.** Если у вас есть опыт и полномочия, это прекрасно, но у нас нет возможности проверить это, не потратив тонны ограниченного времени нашей команды. Делиться образцами вредоносных программ опасно даже среди людей, которые знают, что делают.
 
 ---
 
-\- the [fractureiser Mitigation Team](docs/credits.md)
+\- the [Группа по смягчению последствий фрактурайзера](docs/credits.md)
