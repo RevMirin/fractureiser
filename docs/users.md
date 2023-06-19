@@ -83,10 +83,10 @@ dev.craftbukkit.org, заражая копии нескольких популя
 ### Имеют ли какие-либо файлы моих модов стадию 0?
 Существует множество сканеров, которые берут файл мода и определяют, заражен ли он этапом 0 вредоносного ПО.
 
-* [сканер] Overwolf (https://github.com/overwolf/jar-infection Scanner/releases) * Это рекомендуемый вариант для проверки всей игры — просто укажите его в папке установки CurseForge или в любом другом месте, где у вас есть экземпляры. сохранен
+* [сканер] Overwolf(https://github.com/overwolf/jar-infection/Scanner/releases) * Это рекомендуемый вариант для проверки всей игры — просто укажите его в папке установки CurseForge или в любом другом месте, где у вас есть экземпляры. сохранен
    * Это отдельная программа, не требующая установки приложения Overwolf.
-* douira [онлайн-сканер на основе веб-сайта] (https://douira.github.io/fractureiser-web-detector/)
-* [nekodetector] cortex (https://github.com/MCRcortex/nekodetector/releases)
+* douira [онлайн-сканер на основе веб-сайта](https://douira.github.io/fractureiser-web-detector/)
+* [nekodetector] cortex(https://github.com/MCRcortex/nekodetector/releases)
    * Нажмите «Активы», чтобы отобразить исполняемый файл — требуется установленная Java.
 
 В отдельности заражение стадии 0 не опасно, если файлы удалены и никогда не запускались.
